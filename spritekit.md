@@ -10,4 +10,4 @@ self.physicsBody = borderBody
 self.physicsBody?.categoryBitMask = Collision.Block
 self.physicsBody?.collisionBitMask = Collision.Player
 ```
-- `self.playerSprite?.physicsBody?.applyImpulse(CGVector.init(dx: 0, dy: -15))` basically bounces off your object from say, a wall. Use the `contactTestBitMask` for this. `collisionBitMask` does the job but only once.
+- `self.playerSprite?.physicsBody?.applyImpulse(CGVector.init(dx: 0, dy: -15))` basically bounces your object off from say, a wall. Use the `contactTestBitMask` for this. `collisionBitMask` does the job but only once.
