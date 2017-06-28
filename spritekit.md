@@ -3,6 +3,9 @@
 - Just giving `collisionBitMask` a value will automatically apply physics to an object. What it does to stop your object when it collides with the object with the assigned `collisionBitMask`
 - `contactTestBitMask` will **notify** you of the collision/contact. Adopt the `SKPhysicsContactDelegate` to your scene class, set the `contactDelegate` and implement the delegate methods to customise what happens when there's contact between two physics bodies.
 - The preferred order in `SpriteKit` is to 
+  - init the object, set the position and add it as a child to the scene
+  - Apply physics to it
+  - Apply action/motion to it
 - This is an example showing how to make the scene's frame a border so other physics bodies won't go beyond it.
 ``` swift
 let borderBody = SKPhysicsBody.init(edgeLoopFrom: self.frame)
