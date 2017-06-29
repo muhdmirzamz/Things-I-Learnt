@@ -1,5 +1,6 @@
 ## SpriteKit
 
+- The way ```SpriteKit``` works is that it has an ```SKView``` holding an ```SKScene```. So if you want to get the width or anything, it's not ```self.view.frame.size.width```. Instead, it's ```self.size.width```. If you refer to ```self.view```, it refers to the ``SKView```
 - Just giving `collisionBitMask` a value will automatically apply physics to an object. What it does to stop your object when it collides with the object with the assigned `collisionBitMask`
 - `contactTestBitMask` will **notify** you of the collision/contact. Adopt the `SKPhysicsContactDelegate` to your scene class, set the `contactDelegate` and implement the delegate methods to customise what happens when there's contact between two physics bodies.
 - The preferred order in `SpriteKit` is to 
