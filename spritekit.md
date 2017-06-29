@@ -20,4 +20,4 @@ run(SKAction.repeatForever(SKAction.sequence([SKAction.run {
 			self.addMonster()
 			}, SKAction.wait(forDuration: 1.0)])))
 ```
-- ```monsterSprite.physicsBody?.isDynamic = true``` Imagine a person hits you on the shoulder while both of you are walking towards one another. You would be taken aback into the direction of the hit right? That's what this code does. Basic physics right there. 
+- ```monsterSprite.physicsBody?.isDynamic = true``` Imagine a person hits you on the shoulder while both of you are walking towards one another. You would be taken aback into the direction of the hit right? That's what this code does. Basic physics right there. Setting this to false on both category bit masks will result in each sprite of each bitmask to just pass through each other without collision.
