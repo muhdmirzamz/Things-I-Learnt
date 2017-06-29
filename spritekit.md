@@ -21,3 +21,4 @@ run(SKAction.repeatForever(SKAction.sequence([SKAction.run {
 			}, SKAction.wait(forDuration: 1.0)])))
 ```
 - ```monsterSprite.physicsBody?.isDynamic = true``` Imagine a person hits you on the shoulder while both of you are walking towards one another. You would be taken aback into the direction of the hit right? That's what this code does. Basic physics right there. Setting this to false on both category bit masks will result in each sprite of each bitmask to just pass through each other without collision.
+- If you want to detect multiple contacts of ```SKPhysicsBody```, use the code below. It's from [here](https://stackoverflow.com/a/26331003). Basically check the relation of the bitmasks, which sprite has the lower bitmask. From there, verify that it is the real bitmask you are looking for.
