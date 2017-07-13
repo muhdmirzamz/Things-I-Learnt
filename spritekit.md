@@ -37,3 +37,29 @@ if monsterBody.categoryBitMask == Collision().Monster && projectileBody.category
 
 }
 ```
+- This is how you make a sprite follow a path
+``` swift
+let path = CGMutablePath()
+path.move(to: CGPoint.init(x: 50, y: 50))
+path.addLine(to: CGPoint.init(x: 200, y: 50))
+path.addLine(to: CGPoint.init(x: 200, y: 100))
+path.addLine(to: CGPoint.init(x: 50, y: 100))
+
+let moveAction = SKAction.follow(path, asOffset: false, orientToPath: true, duration: 2)
+
+let forever = SKAction.repeatForever(moveAction)
+monsterSprite.run(forever)
+```
+- Notes about sprites following a path, 
+``` swift
+let moveAction = SKAction.follow(path, asOffset: false, orientToPath: true, duration: 2)
+```
+`asOffset: true` means if your sprite is at (50, 50) and you want it to `path.move(to: CGPoint.init(x: 50, y: 50))`, it adds 50 to the sprite's current position. So, set `offset` to false.
+`orientToPath: true` means your sprite faces the direction it is going to.
+``` swift
+let moveAction = SKAction.follow(path, asOffset: false, orientToPath: true, duration: 2)
+let moveAction2 = SKAction.follow(path, duration: 2)
+```
+Top method provides options for `asOffset` but method below defaults to true. Got to pay attention on this one.
+
+
