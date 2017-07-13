@@ -55,6 +55,7 @@ monsterSprite.run(forever)
 let moveAction = SKAction.follow(path, asOffset: false, orientToPath: true, duration: 2)
 ```
 `asOffset: true` means if your sprite is at (50, 50) and you want it to `path.move(to: CGPoint.init(x: 50, y: 50))`, it adds 50 to the sprite's current position. So, set `offset` to false.
+
 `orientToPath: true` means your sprite faces the direction it is going to.
 ``` swift
 let moveAction = SKAction.follow(path, asOffset: false, orientToPath: true, duration: 2)
