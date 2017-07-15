@@ -13,7 +13,7 @@ func fetchData(completion: @escaping (_ json: [String: Any]) -> Void) {
 	dataTask.resume()
 }
 ```
-Note: `@escaping` keyword (explanation)[https://stackoverflow.com/a/38990967]
+Note: `@escaping` keyword [explanation](https://stackoverflow.com/a/38990967)
 
 This completion handler takes in a dictionary as an argument, most often for use as a JSON. In async calls, once you have the data, you can pass the data through the completion handler arguments. That way, when you call the main function, you can make use of the data that was passed through the completion handler.
 
@@ -24,4 +24,4 @@ let database = Database()
 	print(json)
 }
 ```
-references: (Completion handlers in Swift)[https://thatthinginswift.com/completion-handlers/]
+references: [Completion handlers in Swift](https://thatthinginswift.com/completion-handlers/)
