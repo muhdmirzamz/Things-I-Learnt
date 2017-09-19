@@ -62,5 +62,6 @@ let moveAction = SKAction.follow(path, asOffset: false, orientToPath: true, dura
 let moveAction2 = SKAction.follow(path, duration: 2)
 ```
 Top method provides options for `asOffset` but method below defaults to true. Got to pay attention on this one.
+- Read (this)[https://stackoverflow.com/questions/21505660/physics-bodies-not-responding-to-bitmask-settings#comment60916704_21508132] regarding testing for sprite contact or collision 
 
 
