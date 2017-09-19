@@ -20,7 +20,7 @@ This completion handler takes in a dictionary as an argument, most often for use
 You can then use the json as follows
 ``` swift
 let database = Database()
-	database.fetchData { (json) in
+database.fetchData { (json) in
 	print(json)
 }
 ```
