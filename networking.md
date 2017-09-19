@@ -21,7 +21,7 @@ You can then use the json as follows
 ``` swift
 let database = Database()
 database.fetchData { (json) in
-	print(json)
+  print(json)
 }
 ```
 references: [Completion handlers in Swift](https://thatthinginswift.com/completion-handlers/)
