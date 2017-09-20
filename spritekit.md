@@ -22,6 +22,7 @@ run(SKAction.repeatForever(SKAction.sequence([SKAction.run {
 			}, SKAction.wait(forDuration: 1.0)])))
 ```
 - ```monsterSprite.physicsBody?.isDynamic = true``` Imagine a person hits you on the shoulder while both of you are walking towards one another. You would be taken aback into the direction of the hit right? That's what this code does. Basic physics right there. Setting this to false on both category bit masks will result in each sprite of each bitmask to just pass through each other without collision.
+- Setting `isDynamic` to false ignores all forms of collision or physics applied to node.
 - If you want to detect multiple contacts of ```SKPhysicsBody```, use the code from [here](https://stackoverflow.com/a/26331003). Basically check the relation of the bitmasks, which sprite has the lower bitmask. From there, verify that it is the real bitmask you are looking for.
 - When checking for bitmasks, the current way may seem inefficient because you are checking which sprite has the lower bitmasks first, then assigning. Sure, you can assign straight away, but that results in some highly duplicated code. And you don't want that. It results in duplicated code because you have 2 physics bodies in contact and ```SpriteKit``` cannot which sprite is which. Hence the first part is sort of a trial and error to find out.
 ``` swift
@@ -63,5 +64,7 @@ let moveAction2 = SKAction.follow(path, duration: 2)
 ```
 Top method provides options for `asOffset` but method below defaults to true. Got to pay attention on this one.
 - Read [this](https://stackoverflow.com/questions/21505660/physics-bodies-not-responding-to-bitmask-settings#comment60916704_21508132) regarding testing for sprite contact or collision. Also, read the main answer. That's just a comment.
+- Set all masks if possible. `categoryBitMask`, `collisionBitMask`, `contactTestBitMask`. Setting `collisionBitMask` to 0 is the same as setting `isDynamic` to false.
+
 
 
