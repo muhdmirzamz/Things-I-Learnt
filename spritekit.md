@@ -66,3 +66,4 @@ Top method provides options for `asOffset` but method below defaults to true. Go
 - Read [this](https://stackoverflow.com/questions/21505660/physics-bodies-not-responding-to-bitmask-settings#comment60916704_21508132) regarding testing for sprite contact or collision. Also, read the main answer. That's just a comment.
 - Set all masks if possible. `categoryBitMask`, `collisionBitMask`, `contactTestBitMask`. Setting `collisionBitMask` to 0 is the same as setting `isDynamic` to false.
 - `repeatForever` is not dynamic. If you have a value in your loop, that value will most likely be constant throughout. If you want to randomize enemy movement with this method, use [this](https://stackoverflow.com/a/34709183)
+- Helpful [read](https://code.tutsplus.com/tutorials/spritekit-actions-and-physics--cms-28961) on actions and physics in SpriteKit
